@@ -11,6 +11,8 @@ import { RelayDefaultTopic } from '../lib/waku_relay';
 
 import { ChatMessage } from './chat_message';
 
+export { ChatMessage } from './chat_message';
+
 const ChatContentTopic = 'dingpu';
 
 (async function () {

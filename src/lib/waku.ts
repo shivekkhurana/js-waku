@@ -12,7 +12,7 @@ import { RelayCodec, WakuRelay, WakuRelayPubsub } from './waku_relay';
 import { StoreCodec, WakuStore } from './waku_store';
 
 const WaitForIdentityFreqMs = 50;
-const WaitForIdentityTimeoutMs = 2_000;
+const WaitForIdentityTimeoutMs = 2000;
 
 export interface CreateOptions {
   listenAddresses: string[];
