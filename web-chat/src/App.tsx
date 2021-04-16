@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Log from './Log';
+import Room from './Room';
 import Waku from 'waku/waku';
 import {RelayDefaultTopic} from 'waku/waku_relay';
 import {WakuMessage} from 'waku/waku_message';
@@ -47,8 +47,8 @@ class App extends React.Component<Props, State> {
   render() {
     return (
       <div className='App'>
-        <div className='chat-log'>
-          <Log lines={this.state.messages} />
+        <div className='chat-room'>
+          <Room lines={this.state.messages} />
         </div>
       </div>
     );
