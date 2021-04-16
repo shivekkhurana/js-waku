@@ -17,7 +17,6 @@ export default class Room extends React.Component<Props, State> {
   }
 
   renderLines(lines: string[]) {
-
     const renderedLines = [];
     for (const line of lines) {
       renderedLines.push(<div className='room-row'>{line}</div>);
