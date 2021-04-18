@@ -4,8 +4,7 @@ import { randomInt } from 'crypto';
 import appRoot from 'app-root-path';
 import axios from 'axios';
 import debug from 'debug';
-import Multiaddr from 'multiaddr';
-import multiaddr from 'multiaddr';
+import {Multiaddr} from 'multiaddr';
 import PeerId from 'peer-id';
 
 import { WakuMessage } from '../lib/waku_message';
@@ -205,7 +204,7 @@ export class NimWaku {
 
   get multiaddr(): Multiaddr {
     const port = NIM_WAKU_DEFAULT_P2P_PORT + this.portsShift;
-    return multiaddr(`/ip4/127.0.0.1/tcp/${port}/`);
+    return new Multiaddr(`/ip4/127.0.0.1/tcp/${port}/`);
   }
 
   get rpcUrl(): string {

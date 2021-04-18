@@ -22,3 +22,7 @@ code {
   content: "";
   display: table;
 }
+
+.wrapper {
+  padding: 20px
+}

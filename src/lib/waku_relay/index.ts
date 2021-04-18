@@ -1,5 +1,5 @@
+import Libp2p from 'libp2p';
 import Gossipsub from 'libp2p-gossipsub';
-import { Libp2p } from 'libp2p-gossipsub/src/interfaces';
 import { ControlPrune, PeerInfo } from 'libp2p-gossipsub/src/message';
 import {
   createGossipRpc,
