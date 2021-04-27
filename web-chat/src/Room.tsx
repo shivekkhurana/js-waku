@@ -36,27 +36,18 @@ export default function Room(props: Props) {
       await waku!.relay.send(wakuMsg);
     }
   };
-
-  return (
-    <Grid container spacing={2}>
-      <Grid item xs={12}>
-        <Box
-          height={800}
-          maxHeight={800}
-          style={{ flex: 1, maxHeight: '100%', overflow: 'scroll' }}
-        >
-          <Lines messages={props.lines} />
-        </Box>
-      </Grid>
-
-      <Grid item xs={12}>
-        <MessageInput
-          messageHandler={messageHandler}
-          sendMessage={sendMessage}
-        />
-      </Grid>
-    </Grid>
-  );
+	
+  return (<div style={{display: "flex", flexDirection: "column", height: "98vh"}}>
+    <div style={{display: "flex", flexGrow:1, overflowY: "scroll"}}>
+      <Lines messages={props.lines} />
+    </div>
+    <div style={{display: "flex", padding: 20}}>
+  		<MessageInput
+  			messageHandler={messageHandler}
+  			sendMessage={sendMessage}
+  		/>  
+    </div>
+	</div>);
 }
 
 interface LinesProps {
